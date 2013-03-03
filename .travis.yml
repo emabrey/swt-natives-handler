@@ -1,3 +1,7 @@
 language: java
 
-install: mvn install --quiet -DskipTests=true -Dgpg.skip=true -Dmaven.repo.remote=https://raw.github.com/rodionmoiseev/c10n/master/c10n-mvn-repo/releases
+before_install:
+  - wget https://github.com/rodionmoiseev/c10n/raw/master/c10n-mvn-repo/releases/c10n/c10n-core/1.1/c10n-core-1.1.jar
+  - mvn install:install-file -Dfile=c10n-core-1.1.jar -DgroupId=c10n -DartifactId=c10n-core -Dversion=1.1 -Dpackaging=jar -DgeneratePom=true -DcreateChecksum=true
+  
+install: mvn install --quiet -DskipTests=true -Dgpg.skip=true
