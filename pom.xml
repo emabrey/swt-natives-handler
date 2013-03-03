@@ -4,7 +4,7 @@
 
   <groupId>com.github.emabrey</groupId>
   <artifactId>swt-natives-handler</artifactId>
-  <version>1.0</version>
+  <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
   
   <parent>
@@ -16,6 +16,10 @@
   <name>swt-natives-handler</name>
   <url>https://github.com/emabrey/swt-natives-handler</url>
   <description>A loading wrapper for the SWT native libraries that greatly simplifies the use of SWT</description>
+  
+  <prerequisites>
+      <maven>2.2.1</maven>
+  </prerequisites>
   
   <licenses>
       
@@ -50,6 +54,11 @@
     <developerConnection>scm:git:https://github.com/emabrey/swt-natives-handler.git</developerConnection>
     <url>https://github.com/emabrey/swt-natives-handler.git</url>
   </scm>
+  
+  <ciManagement>
+    <system>travis-ci</system>
+    <url>https://travis-ci.org/emabrey/swt-natives-handler</url>
+  </ciManagement>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -58,7 +67,7 @@
   <build>
     <plugins>
         
-          <!-- Attach Source to build artifact --> 
+          <!-- Attach Source to build artifact upon install or deploy --> 
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-source-plugin</artifactId>
@@ -66,6 +75,7 @@
             <executions>
               <execution>
                 <id>attach-sources</id>
+                <phase>install</phase>
                 <goals>
                   <goal>jar-no-fork</goal>
                 </goals>
@@ -73,7 +83,7 @@
             </executions>
           </plugin>
           
-          <!-- Attach Javadoc to build artifact --> 
+          <!-- Attach Javadoc to build artifact upon install or deploy --> 
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
@@ -81,6 +91,7 @@
             <executions>
               <execution>
                 <id>attach-javadocs</id>
+                <phase>install</phase>
                 <goals>
                   <goal>jar</goal>
                 </goals>
@@ -88,7 +99,7 @@
             </executions>
           </plugin>
           
-          <!-- Attach GPG armored signatures to build artifact --> 
+          <!-- Attach GPG armored signatures to build artifact upon install or deploy--> 
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
@@ -96,7 +107,7 @@
             <executions>
               <execution>
                 <id>sign-artifacts</id>
-                <phase>verify</phase>
+                <phase>install</phase>
                 
                 <goals>
                   <goal>sign</goal>
