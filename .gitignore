@@ -1,0 +1,13 @@
+target/
+
+*.DS_Store
+Thumbs.db
+
+.classpath
+.project
+.settings/
+
+nbactions.xml
+nb-configuration.xml
+
+.idea/

@@ -1,0 +1,137 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.emabrey</groupId>
+  <artifactId>swt-natives-handler</artifactId>
+  <version>4.2.1</version>
+  <packaging>jar</packaging>
+
+  <name>swt-natives-handler</name>
+  <url>https://github.com/emabrey/swt-bundle-jar</url>
+  <description>A loading wrapper for the SWT native libraries that greatly simplifies the use of SWT</description>
+  
+  <licenses>
+      
+    <license>
+      <name>GNU GENERAL PUBLIC LICENSE Version 3</name>
+      <url>http://www.gnu.org/licenses/gpl-3.0.txt</url>
+      <distribution>repo,manual</distribution>
+    </license>
+    
+  </licenses>
+  
+  <developers>
+      
+    <developer>
+      <id>emabrey</id>
+      <name>Emily Mabrey</name>
+      <email>emilymabrey93@gmail.com</email>
+      <roles>
+        <role>creator</role>
+        <role>contact</role>
+      </roles>
+      <timezone>-5</timezone>
+      <properties>
+        <picUrl>http://tinyurl.com/b9cgotm</picUrl>
+      </properties>
+    </developer>
+    
+  </developers>
+  
+  <scm>
+    <connection>scm:git:https://github.com/emabrey/swt-bundle-jar</connection>
+    <developerConnection>scm:git:https://github.com/emabrey/swt-bundle-jar</developerConnection>
+    <url>https://github.com/emabrey/swt-bundle-jar</url>
+  </scm>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <netbeans.hint.license>gpl30</netbeans.hint.license>
+  </properties>
+  
+  <build>
+    <plugins>
+        
+          <!-- Attach Source to build artifact --> 
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>2.2.1</version>
+            <executions>
+              <execution>
+                <id>attach-sources</id>
+                <goals>
+                  <goal>jar-no-fork</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          
+          <!-- Attach Javadoc to build artifact --> 
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>2.9</version>
+            <executions>
+              <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          
+    </plugins>
+  </build>
+
+    
+  <repositories>
+      
+      <!-- C10n Internationalization Repository -->
+      <repository>
+        <id>c10n-releases</id>
+        <name>C10N Releases</name>
+        <url>https://raw.github.com/rodionmoiseev/c10n/master/c10n-mvn-repo/releases</url>
+        <layout>default</layout>
+        <releases>
+          <enabled>true</enabled>
+          <updatePolicy>always</updatePolicy>
+          <checksumPolicy>warn</checksumPolicy>
+        </releases>
+        <snapshots>
+          <enabled>false</enabled>
+          <updatePolicy>never</updatePolicy>
+          <checksumPolicy>fail</checksumPolicy>
+        </snapshots>
+      </repository>
+      
+  </repositories>
+  
+  <dependencies>
+
+      <!-- Logging Library API-->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.7.2</version>
+        <scope>compile</scope>
+      </dependency>  
+      
+      <!-- Internationalization Library -->
+      <dependency>
+        <groupId>c10n</groupId>
+        <artifactId>c10n-core</artifactId>
+        <version>1.1</version>
+      </dependency>
+      
+      <!-- LMZA Compression Library -->
+      <dependency>
+        <groupId>com.github.jponge</groupId>
+        <artifactId>lzma-java</artifactId>
+        <version>1.2</version>
+      </dependency>
+
+  </dependencies>
+</project>
