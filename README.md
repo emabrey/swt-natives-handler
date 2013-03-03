@@ -5,7 +5,7 @@ _Copyright (C) 2013 emabrey_
 
 ##Build Instructions/Information
 
-The project uses Maven, and follows the Maven standards regarding layout and dependencies. If you are not familiar with Maven, please check out [this helpful guide](http://maven.apache.org/guides/getting-started/index.html) The guide to [Maven in 5 minutes](http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html) is also available; it will give you a basic understanding of how to use Maven from the command line.
+The project uses Maven, and follows the Maven standards regarding layout and dependencies. If you are not familiar with Maven, please check out [this helpful guide](http://maven.apache.org/guides/getting-started/index.html). The guide to [Maven in 5 minutes](http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html) is also available; it will give you a basic understanding of how to use Maven from the command line.
 
 How to setup Maven with common IDEs/Command Line:
 
