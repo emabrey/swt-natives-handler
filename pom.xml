@@ -40,14 +40,13 @@
   </developers>
   
   <scm>
-    <connection>scm:git:https://github.com/emabrey/swt-bundle-jar</connection>
-    <developerConnection>scm:git:https://github.com/emabrey/swt-bundle-jar</developerConnection>
-    <url>https://github.com/emabrey/swt-bundle-jar</url>
+    <connection>scm:git:https://github.com/emabrey/swt-natives-handler</connection>
+    <developerConnection>scm:git:https://github.com/emabrey/swt-natives-handler</developerConnection>
+    <url>https://github.com/emabrey/swt-natives-handler</url>
   </scm>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <netbeans.hint.license>gpl30</netbeans.hint.license>
   </properties>
   
   <build>
@@ -85,29 +84,6 @@
           
     </plugins>
   </build>
-
-    
-  <repositories>
-      
-      <!-- C10n Internationalization Repository -->
-      <repository>
-        <id>c10n-releases</id>
-        <name>C10N Releases</name>
-        <url>https://raw.github.com/rodionmoiseev/c10n/master/c10n-mvn-repo/releases</url>
-        <layout>default</layout>
-        <releases>
-          <enabled>true</enabled>
-          <updatePolicy>always</updatePolicy>
-          <checksumPolicy>warn</checksumPolicy>
-        </releases>
-        <snapshots>
-          <enabled>false</enabled>
-          <updatePolicy>never</updatePolicy>
-          <checksumPolicy>fail</checksumPolicy>
-        </snapshots>
-      </repository>
-      
-  </repositories>
   
   <dependencies>
 
