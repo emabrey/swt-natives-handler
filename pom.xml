@@ -88,6 +88,28 @@
             </executions>
           </plugin>
           
+          <!-- Attach GPG armored signatures to build artifact --> 
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.4</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+    
+                <configuration>
+                    <useAgent>true</useAgent><!-- Eliminates warning under gpg2 -->
+                </configuration>
+                
+              </execution>
+            </executions>
+        </plugin>
+          
     </plugins>
   </build>
   
