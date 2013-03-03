@@ -1,7 +1,9 @@
 #swt-natives-handler
 A loading wrapper for the SWT native libraries that greatly simplifies the use of SWT
 
-_Copyright (C) 2013 emabrey_
+_Copyright (C) 2013 Emily Mabrey_
+
+[![Build Status](https://travis-ci.org/emabrey/swt-natives-handler.png?branch=master)](https://travis-ci.org/emabrey/swt-natives-handler)
 
 ##Build Instructions/Information
 
