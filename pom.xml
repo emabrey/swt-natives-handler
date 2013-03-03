@@ -6,9 +6,15 @@
   <artifactId>swt-natives-handler</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
+  
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+  </parent>
 
   <name>swt-natives-handler</name>
-  <url>https://github.com/emabrey/swt-bundle-jar</url>
+  <url>https://github.com/emabrey/swt-natives-handler</url>
   <description>A loading wrapper for the SWT native libraries that greatly simplifies the use of SWT</description>
   
   <licenses>
@@ -40,9 +46,9 @@
   </developers>
   
   <scm>
-    <connection>scm:git:https://github.com/emabrey/swt-natives-handler</connection>
-    <developerConnection>scm:git:https://github.com/emabrey/swt-natives-handler</developerConnection>
-    <url>https://github.com/emabrey/swt-natives-handler</url>
+    <connection>scm:git:https://github.com/emabrey/swt-natives-handler.git</connection>
+    <developerConnection>scm:git:https://github.com/emabrey/swt-natives-handler.git</developerConnection>
+    <url>https://github.com/emabrey/swt-natives-handler.git</url>
   </scm>
 
   <properties>
