@@ -30,7 +30,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * A utility class for loading SWT native libraries from the system ClassLoader to the file system.
+ * A utility class for loading SWT native libraries to the file system.
  * @author Emily Mabrey emilymabrey93@gmail.com
  */
 public final class SWTNatives {
@@ -239,7 +239,7 @@ public final class SWTNatives {
      * Determines a ClassLoader location for the given native library version to be loaded from.
      * @param version The version we are attempting to unpack
      * @return The ClassLoader reference to the location of the libraries
-     * @throws InstantiationException If the library cannot be found.
+     * @throws InstantiationException If the library cannot be found or loaded.
      */
     private static String determineBundleLocation(SWT_VERSION version) throws InstantiationException{        
         
@@ -318,7 +318,7 @@ public final class SWTNatives {
      * @param platform The OS platform
      * @param arch The processor architecture
      * @param version The desired SWT version
-     * @return A path for the SWT library the given information requires
+     * @return A ClassLoader path for the SWT library the given information requires
      */
     private static String constructRelativePackageLocation(SWT_PLATFORM platform, SWT_PLATFORM_ARCH arch, SWT_VERSION version){
                 
@@ -340,7 +340,7 @@ public final class SWTNatives {
      * Buffered copy the source stream to the destination stream, and then attempt to close both streams.
      * @param sourceStream Input
      * @param destStream Output
-     * @throws InstantiationException If we are unable to copy the streams, but not if we cannot close them 
+     * @throws InstantiationException If we are unable to copy the streams
      */
     private static void copyStream(InputStream sourceStream, OutputStream destStream) throws InstantiationException{
         try{
@@ -398,7 +398,7 @@ public final class SWTNatives {
     }
         
     /**
-     * Creates and logs an exception.
+     * Creates and logs an exception with a given error message.
      * @param errorMessageName The localized error message
      * @return The created and logged exception
      */
