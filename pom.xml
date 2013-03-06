@@ -51,7 +51,7 @@
   
   <scm>
     <connection>scm:git:https://github.com/emabrey/swt-natives-handler.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com:emabrey/swt-natives-handler.git</developerConnection>
+    <developerConnection>scm:git:ssh://git@github.com/emabrey/swt-natives-handler.git</developerConnection>
     <url>https://github.com/emabrey/swt-natives-handler.git</url>
   </scm>
   
